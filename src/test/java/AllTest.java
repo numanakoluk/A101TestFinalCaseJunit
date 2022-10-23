@@ -13,7 +13,7 @@ import pages.ProductsPage;
  * Unit test for simple App.
  */
 
-public class AppTest  extends Driver {
+public class AllTest extends Driver {
 
     GuestPage guestPage;
     LoginPage loginPage;
