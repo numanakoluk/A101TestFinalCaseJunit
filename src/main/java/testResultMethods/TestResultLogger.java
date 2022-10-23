@@ -1,11 +1,14 @@
 package testResultMethods;
 
+import log.Log;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestWatcher;
 
 import java.util.Optional;
 
 public class TestResultLogger implements TestWatcher {
+
+    Log log = new Log();
 
     @Override
     public void testDisabled(ExtensionContext context, Optional<String> reason) {
@@ -14,7 +17,8 @@ public class TestResultLogger implements TestWatcher {
 
     @Override
     public void testSuccessful(ExtensionContext context) {
-        TestWatcher.super.testSuccessful(context);
+        String testName = context.getDisplayName();
+        log.info(testName + "Passed");
     }
 
     @Override
@@ -24,6 +28,8 @@ public class TestResultLogger implements TestWatcher {
 
     @Override
     public void testFailed(ExtensionContext context, Throwable cause) {
-        TestWatcher.super.testFailed(context, cause);
+        String testName = context.getDisplayName();
+        String testFailCause = cause.getMessage();
+        log.error(testName + "Fail with cause : " + testFailCause);
     }
 }
