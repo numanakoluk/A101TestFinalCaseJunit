@@ -9,9 +9,8 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.ProductsPage;
 
-public class WithLoginTest {
 
-    public class AppTest  extends Driver {
+    public class WithLoginTest  extends Driver {
 
         GuestPage guestPage;
         LoginPage loginPage;
@@ -27,7 +26,6 @@ public class WithLoginTest {
             productsPage=new ProductsPage();
         }
     @Test
-    @Order(1)
     public void loginScenerio() throws InterruptedException {
         Init();
 
@@ -50,4 +48,4 @@ public class WithLoginTest {
 
     }
     }
-}
+

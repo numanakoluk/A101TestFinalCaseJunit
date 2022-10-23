@@ -10,8 +10,8 @@ import pages.GuestPage;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.ProductsPage;
-public class WithNotLoginTest {
-    public class AllTest extends Driver {
+
+    public class WithNotLoginTest extends Driver {
 
         GuestPage guestPage;
         LoginPage loginPage;
@@ -27,7 +27,6 @@ public class WithNotLoginTest {
             productsPage=new ProductsPage();
         }
     @Test
-    @Order(2)
     public void loginOutScenerio() throws InterruptedException {
 
         Init();
@@ -40,6 +39,6 @@ public class WithNotLoginTest {
         productsPage.otherProduct();
         productsPage.controlShoppingDone();
 
-    }
+
     }
 }
