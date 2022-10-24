@@ -5,6 +5,8 @@ import methods.Methods;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+
+import static constant.GuestConstant.*;
 import static constant.LoginConstant.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -45,7 +47,9 @@ public class LoginPage extends Driver {
     public void controlLoginPassword()throws InterruptedException{
         WebElement passwordText = driver.findElement(FACEBOOK_PASSWORD);
         passwordText.sendKeys(PASSWORD);
+        assertTrue(methods.isElementClickable(FACEBOOK_NEXT, 20));
         methods.clickElement(FACEBOOK_NEXT);
+        //Login Control
         System.out.println("Şifre girildi");
         methods.waitBySeconds(1);
     }

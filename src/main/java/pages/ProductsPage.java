@@ -9,7 +9,9 @@ import java.util.List;
 import java.util.Random;
 
 import static constant.LoginConstant.FACEBOOKLOGIN_BUTTON;
+import static constant.LoginConstant.FACEBOOK_NEXT;
 import static constant.ProductsConstant.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ProductsPage extends Driver {
     Actions actions=new Actions(driver);
@@ -43,6 +45,7 @@ public class ProductsPage extends Driver {
             int randomProduct = random.nextInt(maxProducts);
             productElems.get(randomProduct).click();
             methods.waitBySeconds(3);
+            assertTrue(methods.isElementClickable(OtherProduct, 20));
         }
         System.out.println("Diğer Ürün Sepete eklendi");
         methods.waitBySeconds(2);
@@ -53,8 +56,7 @@ public class ProductsPage extends Driver {
         for(String winHandle : driver.getWindowHandles()){
             driver.switchTo().window(winHandle);}
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scroll(0,500)");
+        methods.scrollElement(ADD_TO_CART);
         methods.waitBySeconds(2);
 
         /*WebElement closePopUp=driver.findElement(POPUPCustomer);
@@ -62,6 +64,7 @@ public class ProductsPage extends Driver {
         Thread.sleep(2000);
 */
         methods.clickElement(ADD_TO_CART);
+        assertTrue(methods.isElementClickable(ADD_TO_CART, 20));
         System.out.println("Ürün sepete eklendi");
         methods.waitBySeconds(2);
     }
