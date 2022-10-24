@@ -20,7 +20,7 @@ public class ProductsPage extends Driver {
     }
     public void controlSelectProducts()throws InterruptedException{
         methods.scrollElement(PRODUCTS_ELEMENTS);
-        Thread.sleep(2000);
+        methods.waitBySeconds(2);
         List<WebElement> productElems = driver.findElements(PRODUCTS_ELEMENTS);
         productElems.get(0).click();
     }
@@ -33,7 +33,7 @@ public class ProductsPage extends Driver {
         Thread.sleep(2000);
 */
         methods.scrollElement(OtherProduct);
-        Thread.sleep(2000);
+        methods.waitBySeconds(2);
         List<WebElement> productElems = driver.findElements(OtherProduct);
         if (productElems != null)
         {
@@ -42,10 +42,10 @@ public class ProductsPage extends Driver {
             Random random = new Random();
             int randomProduct = random.nextInt(maxProducts);
             productElems.get(randomProduct).click();
-            Thread.sleep(10000);
+            methods.waitBySeconds(3);
         }
         System.out.println("Diğer Ürün Sepete eklendi");
-        Thread.sleep(2000);
+        methods.waitBySeconds(2);
 
     }
     public void controlAddToCart()throws InterruptedException{
@@ -55,7 +55,7 @@ public class ProductsPage extends Driver {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scroll(0,500)");
-        Thread.sleep(5000);
+        methods.waitBySeconds(2);
 
         /*WebElement closePopUp=driver.findElement(POPUPCustomer);
         closePopUp.click();
@@ -63,14 +63,14 @@ public class ProductsPage extends Driver {
 */
         methods.clickElement(ADD_TO_CART);
         System.out.println("Ürün sepete eklendi");
-        Thread.sleep(10000);
+        methods.waitBySeconds(2);
     }
     public void controlShoppingCart()throws InterruptedException{
         methods.clickElement(POPUP2);
         System.out.println("Pop UP kapandı");
-        Thread.sleep(3000);
+        methods.waitBySeconds(2);
         methods.scrollElement(ADD_TO_CART);
-        Thread.sleep(3000);
+        methods.waitBySeconds(2);
     }
 
 
@@ -81,13 +81,13 @@ public class ProductsPage extends Driver {
 
         methods.clickElement(SHOPPING_CART);
         System.out.println("Devam Et");
-        Thread.sleep(2000);
+        methods.waitBySeconds(2);
 
 
 
         methods.clickElement(SHOPPING_DONE_BUTTON);
         System.out.println("Alışveriş tamamlandı");
-        Thread.sleep(3000);
+        methods.waitBySeconds(2);
     }
 
 }

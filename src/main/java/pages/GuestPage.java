@@ -15,17 +15,17 @@ public class GuestPage extends Driver{
         assertTrue(methods.isElementVisible(MYACCOUNT_CONTROL, 20));
         assertTrue(methods.isElementVisible(LOGO_CONTROL, 20));
         assertTrue(methods.isElementVisible(SEARCHTEXT_CONTROL, 20));
-        Thread.sleep(2000);
+        methods.waitBySeconds(1);
     }
     public void controlHover() throws InterruptedException {
         WebElement LoginHover = driver.findElement(MYACCOUNT_CONTROL);
-        Thread.sleep(2000);
+        methods.waitBySeconds(1);
         actions.moveToElement(LoginHover).perform();
-        Thread.sleep(2000);
+        methods.waitBySeconds(1);
         WebElement LoginClick = driver.findElement(LOGINBUTTON_CONTROL);
-        Thread.sleep(2000);
+        methods.waitBySeconds(1);
         actions.moveToElement(LoginClick).click().perform();
         System.out.println("Login tıklandı");
-        Thread.sleep(5000);
+        methods.waitBySeconds(1);
     }
 }
