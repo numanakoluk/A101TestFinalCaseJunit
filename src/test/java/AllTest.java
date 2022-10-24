@@ -43,7 +43,7 @@ public class AllTest extends Driver {
         guestPage.controlGuestPage();
         guestPage.controlHover();
         loginPage.controlEmailPage();
-        loginPage.loginGoogle();
+        loginPage.loginFacebook();
         loginPage.controlFacebookPage();
         loginPage.loginFacebookPage();
         loginPage.loginPassword();

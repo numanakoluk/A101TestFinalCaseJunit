@@ -1,10 +1,7 @@
 import log.Log;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import driver.Driver;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 import pages.GuestPage;
 import pages.LoginPage;
 import pages.MainPage;
@@ -34,7 +31,7 @@ import pages.ProductsPage;
         guestPage.controlGuestPage();
         guestPage.controlHover();
         loginPage.controlEmailPage();
-        loginPage.loginGoogle();
+        loginPage.loginFacebook();
         loginPage.controlFacebookPage();
         loginPage.loginFacebookPage();
         loginPage.loginPassword();

@@ -23,7 +23,7 @@ public class LoginPage extends Driver {
         assertTrue(methods.isElementVisible(FACEBOOKLOGIN_BUTTON,20));
         Thread.sleep(2000);
     }
-    public void loginGoogle() throws InterruptedException{
+    public void loginFacebook() throws InterruptedException{
 
 
         methods.scrollElement(FACEBOOKLOGIN_BUTTON);

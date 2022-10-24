@@ -35,7 +35,6 @@ public class Driver {
         ChromeOptions options = new ChromeOptions();
         options.merge(desiredCapabilities);
         driver = new ChromeDriver(options);
-
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.get("https://www.hepsiburada.com/");
