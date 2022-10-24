@@ -1,6 +1,7 @@
 package pages;
 
 import driver.Driver;
+import log.Log;
 import methods.Methods;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -22,12 +23,12 @@ public class MainPage extends Driver {
     public void searchBoxClick()throws InterruptedException{
         WebElement text = driver.findElement(SEARCHBOX);
         text.sendKeys(SEARCH_KEYWORD);
-        System.out.println("Kelime girildi");
+        Log.logger.info("Kelime arandı:"+ SEARCH_KEYWORD);
         methods.clickElement(SEARCHBOX_SEARCHBUTTON);
         Thread.sleep(2000);
     }
     public void controlSelectFilter()throws InterruptedException{
-        methods.scrollElement(SEARCH_Mark);
+        methods.scrollElement(SEARCH_Mark_SELECT);
         WebElement searchCheckbox=driver.findElement(SEARCH_Mark);
         searchCheckbox.click();
         methods.waitBySeconds(2);

@@ -2,12 +2,15 @@
 import static org.junit.Assert.assertTrue;
 
 import driver.Driver;
+import log.Log;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import pages.GuestPage;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.ProductsPage;
+
+import java.util.logging.Logger;
 
 /**
  * Unit test for simple App.
@@ -23,6 +26,7 @@ public class AllTest extends Driver {
 
     public void Init(){
 
+        Log.logger.info("Test Started");
         guestPage=new GuestPage();
         loginPage=new LoginPage();
         mainPage =new MainPage();

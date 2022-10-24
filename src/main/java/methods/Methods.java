@@ -13,6 +13,8 @@ import java.time.Duration;
 
 public class Methods {
     private static final Logger logger = LogManager.getLogger(Methods.class);
+
+    static Logger log = LogManager.getRootLogger();
     WebDriver driver;
     FluentWait<WebDriver> fluentWait;
     JavascriptExecutor jsDriver;
@@ -40,6 +42,7 @@ public class Methods {
     public void clickElement(By by){
         findElementWait(by).click();
         logger.info(by.toString() + " elementine tıklandı");
+
     }
 
     public void sendKeys(By by, String text){

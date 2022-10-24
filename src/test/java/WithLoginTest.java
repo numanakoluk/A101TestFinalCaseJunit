@@ -1,3 +1,4 @@
+import log.Log;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
@@ -20,6 +21,7 @@ import pages.ProductsPage;
 
         public void Init(){
 
+            Log.logger.info("Test Started");
             guestPage=new GuestPage();
             loginPage=new LoginPage();
             mainPage =new MainPage();

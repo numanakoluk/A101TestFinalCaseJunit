@@ -1,5 +1,6 @@
 package driver;
 
+import log.Log;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -24,13 +25,11 @@ public class Driver {
     @BeforeAll
     public static void beforeAll() {
 
-        logger.info("Test Started");
 
     }
     @BeforeEach
     public void beforeEach() {
 
-        logger.info("========= Before =========");
         System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         ChromeOptions options = new ChromeOptions();
@@ -49,12 +48,10 @@ public class Driver {
             driver.quit();
         }
 
-        logger.info("========= After =========");
     }
 
     @AfterAll
     public static void afterAll() {
 
-        logger.info("****** After All ******");
     }
 }

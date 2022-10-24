@@ -1,6 +1,7 @@
 package pages;
 
 import driver.Driver;
+import log.Log;
 import methods.Methods;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -15,17 +16,17 @@ public class GuestPage extends Driver{
         assertTrue(methods.isElementVisible(MYACCOUNT_CONTROL, 20));
         assertTrue(methods.isElementVisible(LOGO_CONTROL, 20));
         assertTrue(methods.isElementVisible(SEARCHTEXT_CONTROL, 20));
-        methods.waitBySeconds(1);
+        Thread.sleep(2000);
     }
     public void controlHover() throws InterruptedException {
         WebElement LoginHover = driver.findElement(MYACCOUNT_CONTROL);
-        methods.waitBySeconds(1);
+        Thread.sleep(2000);
         actions.moveToElement(LoginHover).perform();
-        methods.waitBySeconds(1);
+        Thread.sleep(2000);
         WebElement LoginClick = driver.findElement(LOGINBUTTON_CONTROL);
-        methods.waitBySeconds(1);
+        Thread.sleep(2000);
         actions.moveToElement(LoginClick).click().perform();
-        System.out.println("Login tıklandı");
-        methods.waitBySeconds(1);
+        Log.logger.info("Login Butonuna Tıklandı:"+ LoginClick);
+        Thread.sleep(5000);
     }
 }

@@ -1,3 +1,4 @@
+import log.Log;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Order;
@@ -11,16 +12,22 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.ProductsPage;
 
-    public class WithNotLoginTest extends Driver {
+import java.util.logging.Logger;
 
-        GuestPage guestPage;
+public class WithNotLoginTest extends Driver {
+
+
+
+    GuestPage guestPage;
+        LoginPage loginPage;
         MainPage mainPage;
         ProductsPage productsPage;
 
 
         public void Init(){
-
+            Log.logger.info("Test Started");
             guestPage=new GuestPage();
+            loginPage=new LoginPage();
             mainPage =new MainPage();
             productsPage=new ProductsPage();
         }

@@ -1,6 +1,7 @@
 package pages;
 
 import driver.Driver;
+import log.Log;
 import methods.Methods;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -37,7 +38,7 @@ public class LoginPage extends Driver {
     public void loginFacebookPage() throws InterruptedException{
         WebElement sendText = driver.findElement(FACEBOOK_EMAIL);
         sendText.sendKeys(EMAIL);
-        System.out.println("Email girildi");
+        Log.logger.info("EMAIL Girildi:"+ EMAIL);
         methods.waitBySeconds(1);
     }
     public void loginPassword()throws InterruptedException{
@@ -47,10 +48,11 @@ public class LoginPage extends Driver {
     public void controlLoginPassword()throws InterruptedException{
         WebElement passwordText = driver.findElement(FACEBOOK_PASSWORD);
         passwordText.sendKeys(PASSWORD);
+        Log.logger.info("Şifre Girildi:"+ PASSWORD);
         assertTrue(methods.isElementClickable(FACEBOOK_NEXT, 20));
         methods.clickElement(FACEBOOK_NEXT);
         //Login Control
-        System.out.println("Şifre girildi");
+        Log.logger.info("Giriş Sağlandı:"+ FACEBOOK_NEXT);
         methods.waitBySeconds(1);
     }
 }

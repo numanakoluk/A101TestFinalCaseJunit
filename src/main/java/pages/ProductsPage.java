@@ -1,6 +1,7 @@
 package pages;
 
 import driver.Driver;
+import log.Log;
 import methods.Methods;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -48,7 +49,7 @@ public class ProductsPage extends Driver {
             methods.waitBySeconds(3);
             assertTrue(methods.isElementClickable(OtherProduct, 20));
         }
-        System.out.println("Diğer Ürün Sepete eklendi");
+        Log.logger.info("Diğer Ürün Sepete Eklendi:"+ OtherProduct);
         methods.waitBySeconds(2);
 
     }
@@ -66,12 +67,12 @@ public class ProductsPage extends Driver {
 */
         methods.clickElement(ADD_TO_CART);
         assertTrue(methods.isElementClickable(ADD_TO_CART, 20));
-        System.out.println("Ürün sepete eklendi");
-        methods.waitBySeconds(2);
+        Log.logger.info("Ürün Sepete Eklendi:"+ ADD_TO_CART);
+        methods.waitBySeconds(3);
     }
     public void controlShoppingCart()throws InterruptedException{
         methods.clickElement(POPUP2);
-        System.out.println("Pop UP kapandı");
+        Log.logger.info("Pop Up Kapandı:"+ POPUP2);
         methods.waitBySeconds(2);
         methods.scrollElement(ADD_TO_CART);
         methods.waitBySeconds(2);
@@ -81,16 +82,15 @@ public class ProductsPage extends Driver {
     public void controlShoppingDone()throws InterruptedException{
         driver.getWindowHandle();
         methods.clickElement(POPUP2);
-        System.out.println("Pop2 Kapandı.");
-
+        Log.logger.info("Pop Up Kapandı:"+ POPUP2);
         methods.clickElement(SHOPPING_CART);
-        System.out.println("Devam Et");
+        Log.logger.info("Devam Et Butonu:"+ SHOPPING_CART);
         methods.waitBySeconds(2);
 
 
 
         methods.clickElement(SHOPPING_DONE_BUTTON);
-        System.out.println("Alışveriş tamamlandı");
+        Log.logger.info("Alışveriş Tamamlandı:"+ SHOPPING_DONE_BUTTON);
         methods.waitBySeconds(2);
     }
 
