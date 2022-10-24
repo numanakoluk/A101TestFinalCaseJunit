@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import java.util.List;
 import java.util.Random;
+
+import static constant.LoginConstant.FACEBOOKLOGIN_BUTTON;
 import static constant.ProductsConstant.*;
 
 public class ProductsPage extends Driver {
@@ -61,16 +63,15 @@ public class ProductsPage extends Driver {
         closePopUp.click();
         Thread.sleep(2000);
 */
-        WebElement addToCart=driver.findElement(ADD_TO_CART);
-        addToCart.click();
+        methods.clickElement(ADD_TO_CART);
         System.out.println("Ürün sepete eklendi");
         Thread.sleep(10000);
     }
     public void controlShoppingCart()throws InterruptedException{
         WebElement closePopUp=driver.findElement(POPUP2);
-        if (POPUP2 != null) {
-            closePopUp.click();
-        }
+        methods.clickElement(POPUP2);
+        System.out.println("Pop UP kapandı");
+
         Thread.sleep(5000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scroll(0,500)");
@@ -84,20 +85,19 @@ public class ProductsPage extends Driver {
 
     public void controlShoppingDone()throws InterruptedException{
         driver.getWindowHandle();
-        WebElement closePopUp=driver.findElement(POPUP2);
-        closePopUp.click();
+        methods.clickElement(POPUP2);
+        System.out.println("Pop2 Kapandı.");
         Thread.sleep(3000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scroll(0,0)");
 
-        WebElement shoppingCart=driver.findElement(SHOPPING_CART);
-        shoppingCart.click();
+        methods.clickElement(SHOPPING_CART);
+        System.out.println("Devam Et");
         Thread.sleep(2000);
 
 
-        Thread.sleep(2000);
-        WebElement shopping=driver.findElement(SHOPPING_DONE_BUTTON);
-        shopping.click();
+
+        methods.clickElement(SHOPPING_DONE_BUTTON);
         System.out.println("Alışveriş tamamlandı");
         Thread.sleep(3000);
     }
