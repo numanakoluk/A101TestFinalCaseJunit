@@ -18,6 +18,6 @@ public class LoginConstant {
 
     public static final By FACEBOOK_PASSWORD = By.cssSelector("input[id=\"pass\"]");
 
-    public static final By GOOGLE_PASSWORD_NEXT= By.cssSelector("button[id=\"loginbutton\"]");
+    public static final By FACEBOOK_NEXT= By.cssSelector("button[id=\"loginbutton\"]");
 
 }

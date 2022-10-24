@@ -21,17 +21,18 @@ public class LoginPage extends Driver {
         Thread.sleep(2000);
     }
     public void loginGoogle() throws InterruptedException{
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scroll(0,500)");
+
+
+        methods.scrollElement(FACEBOOKLOGIN_BUTTON);
         methods.clickElement(FACEBOOKLOGIN_BUTTON);
         Thread.sleep(2000);
     }
-    public void controlGooglePage()throws InterruptedException{
+    public void controlFacebookPage()throws InterruptedException{
         assertTrue(methods.isElementVisible(FACEBOOK_EMAIL, 20));
         Thread.sleep(2000);
 
     }
-    public void loginGooglePage() throws InterruptedException{
+    public void loginFacebookPage() throws InterruptedException{
         WebElement sendText = driver.findElement(FACEBOOK_EMAIL);
         sendText.sendKeys(EMAIL);
         System.out.println("Email girildi");
@@ -44,7 +45,7 @@ public class LoginPage extends Driver {
     public void controlLoginPassword()throws InterruptedException{
         WebElement passwordText = driver.findElement(FACEBOOK_PASSWORD);
         passwordText.sendKeys(PASSWORD);
-        methods.clickElement(GOOGLE_PASSWORD_NEXT);
+        methods.clickElement(FACEBOOK_NEXT);
         System.out.println("Şifre girildi");
         Thread.sleep(2000);
     }

@@ -19,8 +19,7 @@ public class ProductsPage extends Driver {
         methods = new Methods();
     }
     public void controlSelectProducts()throws InterruptedException{
-        js = (JavascriptExecutor) driver;
-        js.executeScript("window.scroll(0,500)");
+        methods.scrollElement(PRODUCTS_ELEMENTS);
         Thread.sleep(2000);
         List<WebElement> productElems = driver.findElements(PRODUCTS_ELEMENTS);
         productElems.get(0).click();
@@ -33,8 +32,7 @@ public class ProductsPage extends Driver {
         closePopUpA.click();
         Thread.sleep(2000);
 */
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scroll(0,1000)");
+        methods.scrollElement(OtherProduct);
         Thread.sleep(2000);
         List<WebElement> productElems = driver.findElements(OtherProduct);
         if (productElems != null)
@@ -68,18 +66,11 @@ public class ProductsPage extends Driver {
         Thread.sleep(10000);
     }
     public void controlShoppingCart()throws InterruptedException{
-        WebElement closePopUp=driver.findElement(POPUP2);
         methods.clickElement(POPUP2);
         System.out.println("Pop UP kapandı");
-
-        Thread.sleep(5000);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scroll(0,500)");
-        Thread.sleep(5000);
-
-
-
-
+        Thread.sleep(3000);
+        methods.scrollElement(ADD_TO_CART);
+        Thread.sleep(3000);
     }
 
 
@@ -87,9 +78,6 @@ public class ProductsPage extends Driver {
         driver.getWindowHandle();
         methods.clickElement(POPUP2);
         System.out.println("Pop2 Kapandı.");
-        Thread.sleep(3000);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scroll(0,0)");
 
         methods.clickElement(SHOPPING_CART);
         System.out.println("Devam Et");
