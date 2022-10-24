@@ -24,7 +24,7 @@ public class Driver {
     @BeforeAll
     public static void beforeAll() {
 
-        logger.info("****** Before All ******");
+        logger.info("Test Started");
 
     }
     @BeforeEach

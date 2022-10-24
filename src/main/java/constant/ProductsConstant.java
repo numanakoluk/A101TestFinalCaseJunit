@@ -14,9 +14,7 @@ public class ProductsConstant {
 
     public static final By POPUPCustomer = By.cssSelector("div[id=\"zendeskCustomLauncherClose\"]");
 
-
     public static final By OtherProduct = By.cssSelector("button[class=\"add-to-basket button small\"]");
-
     public static final By SHOPPING_CART = By.cssSelector("span[id=\"shoppingCart\"]");
 
     public static final By PRODUCT_INCREASE = By.cssSelector("a[aria-label=\"Ürünü Arttır\"]");

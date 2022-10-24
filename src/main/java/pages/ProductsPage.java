@@ -24,6 +24,7 @@ public class ProductsPage extends Driver {
         methods.scrollElement(PRODUCTS_ELEMENTS);
         methods.waitBySeconds(2);
         List<WebElement> productElems = driver.findElements(PRODUCTS_ELEMENTS);
+        //First Element Click.
         productElems.get(0).click();
     }
 

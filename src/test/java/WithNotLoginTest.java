@@ -14,7 +14,6 @@ import pages.ProductsPage;
     public class WithNotLoginTest extends Driver {
 
         GuestPage guestPage;
-        LoginPage loginPage;
         MainPage mainPage;
         ProductsPage productsPage;
 
@@ -22,7 +21,6 @@ import pages.ProductsPage;
         public void Init(){
 
             guestPage=new GuestPage();
-            loginPage=new LoginPage();
             mainPage =new MainPage();
             productsPage=new ProductsPage();
         }

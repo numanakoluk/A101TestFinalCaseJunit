@@ -27,18 +27,16 @@ public class MainPage extends Driver {
         Thread.sleep(2000);
     }
     public void controlSelectFilter()throws InterruptedException{
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scroll(0,1000)");
-        Thread.sleep(2000);
+        methods.scrollElement(SEARCH_Mark);
         WebElement searchCheckbox=driver.findElement(SEARCH_Mark);
         searchCheckbox.click();
-        Thread.sleep(2000);
+        methods.waitBySeconds(2);
         searchCheckbox.sendKeys(SEARCH_KEYWORD_MARK);
-        Thread.sleep(2000);
+        methods.waitBySeconds(2);
         WebElement checkBox=driver.findElement(SEARCH_Mark_SELECT);
         actions.doubleClick(checkBox).perform();
-        Thread.sleep(5000);
+        methods.waitBySeconds(2);
         driver.navigate().refresh();
-        Thread.sleep(10000);
+        methods.waitBySeconds(2);
     }
 }
