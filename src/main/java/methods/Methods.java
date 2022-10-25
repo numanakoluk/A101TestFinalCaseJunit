@@ -69,6 +69,15 @@ public class Methods {
         WebElement webElement = findElementWait(by);
         return jsDriver.executeScript("return arguments[0].title;", webElement).toString();
     }
+    public String getValue2(By by){
+        WebElement webElement = findElementWait(by);
+        return jsDriver.executeScript("return arguments[0].text;", webElement).toString();
+    }
+    public String getValue3(By by){
+        WebElement webElement = findElementWait(by);
+        return jsDriver.executeScript("return arguments[0].text;", webElement).toString();
+    }
+
 
     public void clear(By by){
         findElementWait(by).clear();

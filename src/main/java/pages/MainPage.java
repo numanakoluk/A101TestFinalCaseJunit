@@ -33,7 +33,7 @@ public class MainPage extends Driver {
         searchCheckbox.click();
         methods.waitBySeconds(2);
         searchCheckbox.sendKeys(SEARCH_KEYWORD_MARK);
-        methods.waitBySeconds(2);
+        methods.waitBySeconds(4);
         WebElement checkBox=driver.findElement(SEARCH_Mark_SELECT);
         actions.doubleClick(checkBox).perform();
         methods.waitBySeconds(2);
