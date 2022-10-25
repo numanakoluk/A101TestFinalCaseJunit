@@ -43,7 +43,7 @@ public class AllTest extends Driver {
         guestPage.controlGuestPage();
         guestPage.controlHover();
         loginPage.controlEmailPage();
-        loginPage.loginFacebook();
+        loginPage.loginGoogle();
         loginPage.controlFacebookPage();
         loginPage.loginFacebookPage();
         loginPage.loginPassword();
@@ -56,8 +56,6 @@ public class AllTest extends Driver {
         productsPage.controlShoppingCart();
         productsPage.otherProduct();
         productsPage.controlShoppingDone();
-
-
     }
 
     @Test

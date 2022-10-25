@@ -3,12 +3,14 @@ package pages;
 import driver.Driver;
 import log.Log;
 import methods.Methods;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import static constant.GuestConstant.*;
 import static constant.LoginConstant.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginPage extends Driver {
@@ -23,7 +25,7 @@ public class LoginPage extends Driver {
         assertTrue(methods.isElementVisible(FACEBOOKLOGIN_BUTTON,20));
         Thread.sleep(2000);
     }
-    public void loginFacebook() throws InterruptedException{
+    public void loginGoogle() throws InterruptedException{
 
 
         methods.scrollElement(FACEBOOKLOGIN_BUTTON);
@@ -54,5 +56,9 @@ public class LoginPage extends Driver {
         //Login Control
         Log.logger.info("Giriş Sağlandı:"+ FACEBOOK_NEXT);
         methods.waitBySeconds(1);
+
+        String value = methods.getValue(By.cssSelector("a[data-test-id='account']"));
+        assertEquals("Hesabım",value);
+        Log.logger.info("Doğrulanma sağlandı: " + value);
     }
 }

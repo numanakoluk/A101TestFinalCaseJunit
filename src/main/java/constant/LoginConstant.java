@@ -20,4 +20,10 @@ public class LoginConstant {
 
     public static final By FACEBOOK_NEXT= By.cssSelector("button[id=\"loginbutton\"]");
 
+    public static final By FACEBOOK_LOGIN_VERIFATION= By.xpath("a[data-test-id='account']");
+
+
+
+
+
 }

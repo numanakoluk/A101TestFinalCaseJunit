@@ -67,7 +67,7 @@ public class Methods {
 
     public String getValue(By by){
         WebElement webElement = findElementWait(by);
-        return jsDriver.executeScript("return arguments[0].value;", webElement).toString();
+        return jsDriver.executeScript("return arguments[0].title;", webElement).toString();
     }
 
     public void clear(By by){
@@ -143,6 +143,16 @@ public class Methods {
         waitByMilliSeconds(1000*seconds);
         logger.info(seconds + " saniye beklendi");
     }
+/*    public void assertions(By by) {
+        try {
+            Assert.assertTrue(isElementVisible(by));
+            System.out.println("sıkıntı yok");
+        } catch (Exception e) {
+            System.out.println("sıkıntıllı");
+        }
+
+
+    }*/
     public void waitByMilliSeconds(long milliSeconds){
 
         try {
