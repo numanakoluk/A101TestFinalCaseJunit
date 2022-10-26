@@ -33,6 +33,9 @@ public class Driver {
         System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         ChromeOptions options = new ChromeOptions();
+        //Notifications Close
+        options.addArguments("--disable-notifications");
+        options.addArguments("start-maximized");
         options.merge(desiredCapabilities);
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
