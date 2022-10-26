@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 
 public class LoginConstant {
 
-    public static final String  EMAIL="nakoluk";
+    public static final String  EMAIL="hepsiburadatestdeneme@gmail.com";
 
-    public static final String  PASSWORD="0013700Na";
+    public static final String  PASSWORD="0018000Na";
 
     public static final By ACCOUNTTEXT_CONTROL = By.cssSelector("input[id=\"txtUserName\"]");
 

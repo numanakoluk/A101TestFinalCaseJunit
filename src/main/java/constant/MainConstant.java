@@ -10,7 +10,7 @@ public class MainConstant {
 
     public static final By SEARCHBOX = By.cssSelector("input[aria-autocomplete=\"list\"]");
 
-    public static final By SEARCHBOX_SEARCHBUTTON = By.cssSelector("div.SearchBoxOld-cHxjyU99nxdIaAbGyX7F");
+    public static final By SEARCHBOX_SEARCHBUTTON = By.cssSelector("div[class='SearchBoxOld-cHxjyU99nxdIaAbGyX7F']");
 
     public static final By SEARCH_Mark = By.xpath("//div[@id = 'markalar']//div/div/div/div/input");
 
