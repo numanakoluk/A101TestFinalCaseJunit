@@ -53,7 +53,6 @@ public class AllTest extends Driver {
         mainPage.controlSelectFilter();
         productsPage.controlSelectProducts();
         productsPage.controlAddToCart();
-        productsPage.controlShoppingCart();
         productsPage.otherProduct();
         productsPage.controlShoppingDone();
     }
@@ -68,7 +67,6 @@ public class AllTest extends Driver {
         mainPage.controlSelectFilter();
         productsPage.controlSelectProducts();
         productsPage.controlAddToCart();
-        productsPage.controlShoppingCart();
         productsPage.otherProduct();
         productsPage.controlShoppingDone();
 

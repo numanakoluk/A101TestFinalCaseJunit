@@ -34,13 +34,15 @@ public class WithNotLoginTest extends Driver {
     public void LoginOutScenerio() throws InterruptedException {
 
         Init();
+        mainPage.startPopUpCookies();
         mainPage.controlMainPage();
         mainPage.searchBoxClick();
         mainPage.controlSelectFilter();
         productsPage.controlSelectProducts();
         productsPage.controlAddToCart();
-        productsPage.controlShoppingCart();
         productsPage.otherProduct();
+        productsPage.continueClickProducts();
+        productsPage.controlBasketProducts();
         productsPage.controlShoppingDone();
 
 

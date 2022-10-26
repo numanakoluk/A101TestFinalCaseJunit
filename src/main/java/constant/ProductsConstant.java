@@ -12,8 +12,6 @@ public class ProductsConstant {
     //PopUp Sepete Ekle
     public static final By POPUP2 = By.cssSelector("a[class=\"checkoutui-Modal-2iZXl\"]");
 
-    public static final By POPUPCustomer = By.cssSelector("div[id=\"zendeskCustomLauncherClose\"]");
-
     public static final By OtherProduct = By.cssSelector("button[class=\"add-to-basket button small\"]");
     public static final By SHOPPING_CART = By.cssSelector("span[id=\"shoppingCart\"]");
 

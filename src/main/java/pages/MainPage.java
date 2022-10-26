@@ -16,6 +16,12 @@ public class MainPage extends Driver {
     public MainPage(){
         methods = new Methods();
     }
+
+    public void startPopUpCookies()throws InterruptedException{
+        methods.waitBySeconds(3);
+        methods.clickElement(POPUPNotifications);
+        Log.logger.info("Çerezler Kabul Edildi:"+ POPUPNotifications);
+    }
     public void controlMainPage()throws InterruptedException{
         assertTrue(methods.isElementVisible(SEARCHTEXT_CONTROL, 20));
         Thread.sleep(2000);
@@ -31,7 +37,7 @@ public class MainPage extends Driver {
         methods.scrollElement(SEARCH_Mark_SELECT);
         WebElement searchCheckbox=driver.findElement(SEARCH_Mark);
         searchCheckbox.click();
-        methods.waitBySeconds(2);
+        methods.waitBySeconds(3);
         searchCheckbox.sendKeys(SEARCH_KEYWORD_MARK);
         methods.waitBySeconds(4);
         WebElement checkBox=driver.findElement(SEARCH_Mark_SELECT);
@@ -40,4 +46,5 @@ public class MainPage extends Driver {
         driver.navigate().refresh();
         methods.waitBySeconds(2);
     }
+
 }

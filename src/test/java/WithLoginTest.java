@@ -41,7 +41,6 @@ import pages.ProductsPage;
         mainPage.controlSelectFilter();
         productsPage.controlSelectProducts();
         productsPage.controlAddToCart();
-        productsPage.controlShoppingCart();
         productsPage.otherProduct();
         productsPage.controlShoppingDone();
 

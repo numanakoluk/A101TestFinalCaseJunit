@@ -12,5 +12,8 @@ public class GuestConstant {
 
     public static final By LOGINBUTTON_CONTROL = By.cssSelector("a[id=\"login\"]");
 
+    public static final By POPUPNotifications = By.cssSelector("button[id=\"onetrust-accept-btn-handler\"]");
+
+
 
 }
