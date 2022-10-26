@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 import static constant.GuestConstant.POPUPNotifications;
@@ -112,14 +113,16 @@ public void controlBasketProducts() throws  InterruptedException{
 
 
 
-    String value = methods.getValue2(By.xpath("//*[contains(text(),'vizyon')]"));
-    assertEquals("vizyoniletisim",value);
-    Log.logger.info("Diğer Satıcı Doğrulama: " + value);
+    String value1 = methods.getValue2(By.xpath("//*[contains(text(),'vizyon')]"));
+    String valueLangueage = value1.toLowerCase(Locale.ENGLISH);
+    assertEquals("vizyoniletisim",valueLangueage.toLowerCase(Locale.ENGLISH));
+    Log.logger.info("Diğer Satıcı Doğrulama: " + valueLangueage);
     methods.waitBySeconds(3);
 
-    String value2 = methods.getValue3(By.xpath("//*[contains(text(),'mekanik')]"));
-    assertEquals("mekanikcep",value2);
-    Log.logger.info("Ana Satıcı Doğrulama: " + value2);
+    String value2 = methods.getValue3(By.xpath("//*[contains(text(),'rüzgar gsm')]"));
+    String valueLangueage2 = value2.toLowerCase(Locale.ENGLISH);
+    assertEquals("rüzgar gsm",valueLangueage2);
+    Log.logger.info("Ana Satıcı Doğrulama: " + valueLangueage2);
 }
 
     public void controlShoppingDone()throws InterruptedException{
