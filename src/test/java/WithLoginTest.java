@@ -25,7 +25,7 @@ import pages.ProductsPage;
             productsPage=new ProductsPage();
         }
     @Test
-    public void loginScenerio() throws InterruptedException {
+    public void LoginScenerio() throws InterruptedException {
         Init();
 
         guestPage.controlGuestPage();

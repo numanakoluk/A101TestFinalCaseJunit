@@ -37,7 +37,7 @@ public class AllTest extends Driver {
 
     @Test
     @Order(1)
-    public void loginScenerio() throws InterruptedException {
+    public void LoginScenerio() throws InterruptedException {
         Init();
 
         guestPage.controlGuestPage();

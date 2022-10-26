@@ -18,21 +18,20 @@ public class WithNotLoginTest extends Driver {
 
 
 
-    GuestPage guestPage;
+        GuestPage guestPage;
         LoginPage loginPage;
         MainPage mainPage;
         ProductsPage productsPage;
 
 
         public void Init(){
-            Log.logger.info("Test Started");
             guestPage=new GuestPage();
             loginPage=new LoginPage();
             mainPage =new MainPage();
             productsPage=new ProductsPage();
         }
     @Test
-    public void loginOutScenerio() throws InterruptedException {
+    public void LoginOutScenerio() throws InterruptedException {
 
         Init();
         mainPage.controlMainPage();

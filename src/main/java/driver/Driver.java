@@ -38,6 +38,8 @@ public class Driver {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.get("https://www.hepsiburada.com/");
+        Log.logger.info("Test Started");
+
     }
 
     @AfterEach
@@ -45,6 +47,7 @@ public class Driver {
 
         if (driver != null) {
             driver.quit();
+            Log.logger.info("Test Finished");
         }
 
     }
