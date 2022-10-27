@@ -45,6 +45,7 @@ public class Methods {
 
     }
 
+
     public void sendKeys(By by, String text){
         findElementWait(by).sendKeys(text);
         logger.info(by.toString() + " elementine " + text + " texti yazıldı");

@@ -22,6 +22,8 @@ public class ProductsPage extends Driver {
     Actions actions=new Actions(driver);
     Methods methods;
     JavascriptExecutor js;
+
+
     public ProductsPage(){
         methods = new Methods();
     }
@@ -48,11 +50,7 @@ public class ProductsPage extends Driver {
             driver.switchTo().window(winHandle);}
         methods.scrollElement(OtherProduct);
         methods.waitBySeconds(2);
-
-        List<WebElement> productElems = driver.findElements(OtherProduct);
-        productElems.get(1).click();
-        methods.waitBySeconds(2);
-
+        methods.clickElement(OtherProduct2);
         /*WebElement closePopUp=driver.findElement(POPUPCustomer);
         closePopUp.click();
         Thread.sleep(2000);
@@ -74,23 +72,12 @@ public class ProductsPage extends Driver {
         closePopUpA.click();
         Thread.sleep(2000);
 */
-        methods.scrollElement(OtherProduct);
+
+        methods.scrollElement(ADD_TO_CART);
         methods.waitBySeconds(2);
-        List<WebElement> productElems = driver.findElements(OtherProduct);
-//        if (productElems != null)
-//        {
-//            int maxProducts = productElems.size();
-//            System.out.println(maxProducts);
-//            Random random = new Random();
-//            int randomProduct = random.nextInt(maxProducts);
-//            productElems.get(randomProduct).click();
-//            methods.waitBySeconds(3);
-//            assertTrue(methods.isElementClickable(OtherProduct, 20));
-//        }
-        //First Element Click.
-        productElems.get(0).click();
+        methods.clickElement(OtherProduct3);
         methods.waitBySeconds(3);
-        Log.logger.info("Diğer Ürün Sepete Eklendi:"+ OtherProduct);
+        Log.logger.info("Diğer Ürün Sepete Eklendi:"+ OtherProduct3);
         methods.waitBySeconds(2);
 
         driver.getWindowHandle();
@@ -113,9 +100,9 @@ public void controlBasketProducts() throws  InterruptedException{
 
 
 
-    String value1 = methods.getValue2(By.xpath("//*[contains(text(),'vizyon')]"));
+    String value1 = methods.getValue2(By.xpath("//*[contains(text(),'han mobile')]"));
     String valueLangueage = value1.toLowerCase(Locale.ENGLISH);
-    assertEquals("vizyoniletisim",valueLangueage.toLowerCase(Locale.ENGLISH));
+    assertEquals("han mobile",valueLangueage);
     Log.logger.info("Diğer Satıcı Doğrulama: " + valueLangueage);
     methods.waitBySeconds(3);
 
@@ -126,8 +113,6 @@ public void controlBasketProducts() throws  InterruptedException{
 }
 
     public void controlShoppingDone()throws InterruptedException{
-
-
 
         methods.clickElement(SHOPPING_DONE_BUTTON);
         Log.logger.info("Alışveriş Tamamlandı:"+ SHOPPING_DONE_BUTTON);

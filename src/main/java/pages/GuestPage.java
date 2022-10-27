@@ -18,7 +18,7 @@ public class GuestPage extends Driver{
         assertTrue(methods.isElementVisible(SEARCHTEXT_CONTROL, 20));
         Thread.sleep(2000);
     }
-    public void controlHover() throws InterruptedException {
+    public void controlHoverandLogin() throws InterruptedException {
         WebElement LoginHover = driver.findElement(MYACCOUNT_CONTROL);
         Thread.sleep(2000);
         actions.moveToElement(LoginHover).perform();

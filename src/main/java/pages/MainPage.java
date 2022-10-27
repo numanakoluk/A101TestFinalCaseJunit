@@ -24,22 +24,23 @@ public class MainPage extends Driver {
     }
     public void controlMainPage()throws InterruptedException{
         assertTrue(methods.isElementVisible(SEARCHTEXT_CONTROL, 20));
-        Thread.sleep(2000);
+        methods.waitBySeconds(3);
     }
     public void searchBoxClick()throws InterruptedException{
         WebElement text = driver.findElement(SEARCHBOX);
         text.sendKeys(SEARCH_KEYWORD);
         Log.logger.info("Kelime arandı:"+ SEARCH_KEYWORD);
         methods.clickElement(SEARCHBOX_SEARCHBUTTON);
-        Thread.sleep(2000);
+        methods.waitBySeconds(3);
     }
     public void controlSelectFilter()throws InterruptedException{
-        methods.scrollElement(SEARCH_Mark_SELECT);
-        WebElement searchCheckbox=driver.findElement(SEARCH_Mark);
-        searchCheckbox.click();
+
+        methods.scrollElement(SEARCH_Mark);
+        //WebElement searchCheckbox=driver.findElement(SEARCH_Mark);
+        //searchCheckbox.click();
         methods.waitBySeconds(3);
-        searchCheckbox.sendKeys(SEARCH_KEYWORD_MARK);
-        methods.waitBySeconds(4);
+        //searchCheckbox.sendKeys(SEARCH_KEYWORD_MARK);
+        //methods.waitBySeconds(4);
         WebElement checkBox=driver.findElement(SEARCH_Mark_SELECT);
         actions.doubleClick(checkBox).perform();
         methods.waitBySeconds(2);

@@ -29,9 +29,8 @@ import pages.ProductsPage;
         Init();
 
         guestPage.controlGuestPage();
-        guestPage.controlHover();
         loginPage.controlEmailPage();
-        loginPage.loginGoogle();
+        loginPage.loginFacebook();
         loginPage.controlFacebookPage();
         loginPage.loginFacebookPage();
         loginPage.loginPassword();
