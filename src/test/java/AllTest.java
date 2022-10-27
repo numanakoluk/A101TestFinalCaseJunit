@@ -26,7 +26,6 @@ public class AllTest extends Driver {
 
     public void Init(){
 
-        Log.logger.info("Test Started");
         guestPage=new GuestPage();
         loginPage=new LoginPage();
         mainPage =new MainPage();
@@ -84,6 +83,9 @@ public class AllTest extends Driver {
         //Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanır.
         productsPage.controlBasketProducts();
 
+        //Sepete Gidilir.
+        productsPage.continueClickProducts();
+
         //AlışVeriş Tamamlanır.
         productsPage.controlShoppingDone();
     }
@@ -117,8 +119,13 @@ public class AllTest extends Driver {
         //Ikinci Ürün Sepete Eklenir
         productsPage.otherProduct();
 
+        //Sepete Gidilir.
+        productsPage.continueClickProducts();
+
         //Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanır.
         productsPage.controlBasketProducts();
+
+
 
         //AlışVeriş Tamamlanır.
         productsPage.controlShoppingDone();
