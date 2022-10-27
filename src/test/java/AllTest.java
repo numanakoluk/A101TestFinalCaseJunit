@@ -39,35 +39,88 @@ public class AllTest extends Driver {
     @Order(1)
     public void LoginScenerio() throws InterruptedException {
         Init();
+        //Çerezler Kabul Edilir.
+        mainPage.startPopUpCookies();
 
+        //Hepsiburada Olduğu Doğrulanır
         guestPage.controlGuestPage();
-        guestPage.controlHover();
+
+        //Login Butonuna Tıklanır
+        guestPage.controlHoverandLogin();
+
+        //Login Sayfasi Kontrol Edilir
         loginPage.controlEmailPage();
-        loginPage.loginGoogle();
+
+        //Facebook ile giriş için tıklanır
+        loginPage.loginFacebook();
+
+        //Facebook ile giriş sayfası doğrulanır
         loginPage.controlFacebookPage();
+
+        //Email Texte Girilir
         loginPage.loginFacebookPage();
+
+        //Şifre Texte Girilir
         loginPage.loginPassword();
+
+        //Kullanıcı Girişi Doğrulanır
         loginPage.controlLoginPassword();
-        mainPage.controlMainPage();
+
+        //Arama Yapılan Ürün ile Yeni Sekmede Devam Edilir
         mainPage.searchBoxClick();
+
+        //Ürün için Filtreleme Yapılır
         mainPage.controlSelectFilter();
+
+        //Ürün ilk satıdıcıdan sepete eklenir
         productsPage.controlSelectProducts();
+
+        //Birinci Ürün Sepete Eklenir
         productsPage.controlAddToCart();
+
+        //Ikinci Ürün Sepete Eklenir
         productsPage.otherProduct();
+
+        //Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanır.
+        productsPage.controlBasketProducts();
+
+        //AlışVeriş Tamamlanır.
         productsPage.controlShoppingDone();
     }
 
     @Test
     @Order(2)
-    public void loginOutScenerio() throws InterruptedException {
+    public void LoginOutScenerio() throws InterruptedException {
 
         Init();
+        //Çerezler Kabul Edilir.
+        mainPage.startPopUpCookies();
+
+        //Hepsiburada Olduğu Doğrulanır
+        guestPage.controlGuestPage();
+
+        //AnaSayfa Doğrulanır.
         mainPage.controlMainPage();
+
+        //Arama Yapılan Ürün ile Yeni Sekmede Devam Edilir
         mainPage.searchBoxClick();
+
+        //Ürün için Filtreleme Yapılır
         mainPage.controlSelectFilter();
+
+        //Ürün ilk satıdıcıdan sepete eklenir
         productsPage.controlSelectProducts();
+
+        //Birinci Ürün Sepete Eklenir
         productsPage.controlAddToCart();
+
+        //Ikinci Ürün Sepete Eklenir
         productsPage.otherProduct();
+
+        //Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanır.
+        productsPage.controlBasketProducts();
+
+        //AlışVeriş Tamamlanır.
         productsPage.controlShoppingDone();
 
 
