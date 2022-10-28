@@ -1,8 +1,8 @@
 <div align="center">
- A101WebTestProject
+ HepsiBuradaWebTestProject
 </div>
 
-# **Selenium ile Test Otomasyonu** //Intelij //MVN test
+# **Selenium ile Test Otomasyonu** //Intelij //MVN//JUNIT
 # AllSteps Hepsiburada WithLogin Scenario 
 **Tags:chrome**
 1. [+] **Çerezler Kabul Edilir.**
