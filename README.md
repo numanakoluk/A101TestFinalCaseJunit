@@ -12,9 +12,6 @@
 5. [+] **Kullanıcı, Arama sonucunda ekrana gelen ürün listesinden (veya tek bir sonuç da dönmüş olabilir) ürün seçer..**
 6. [+] **Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.**
 7. [+] **Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanır.**
-8. [+] **Web'te Yeni adres kaydı oluşturulur.**
-9. [+] **Web'te Ödeme ekranına gidilir ve Kart bilgileri girilir.**
-10. [+] **Web'te Ödeme ekranına gidildiği doğrulanır.**
 
 # AllSteps Hepsiburada WithNothLogin Scenario 
 **Tags:chrome**
@@ -23,9 +20,7 @@
 3. [+] **Kullanıcı, Arama sonucunda ekrana gelen ürün listesinden (veya tek bir sonuç da dönmüş olabilir) ürün seçer..**
 4. [+] **Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.**
 5. [+] **Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanır.**
-6. [+] **Web'te Yeni adres kaydı oluşturulur.**
-7. [+] **Web'te Ödeme ekranına gidilir ve Kart bilgileri girilir.**
-8. [+] **Web'te Ödeme ekranına gidildiği doğrulanır.**
+
 
 # Log4j.xml 
 
