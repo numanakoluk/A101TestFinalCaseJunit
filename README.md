@@ -21,6 +21,10 @@
 4. [+] **Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.**
 5. [+] **Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanır.**
 
+# Demo
+
+https://user-images.githubusercontent.com/89300182/199478259-af42984b-c474-413c-b60b-167aa7515200.mp4
+
 
 # Log4j.xml 
 
