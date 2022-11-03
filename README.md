@@ -2,7 +2,7 @@
  HepsiBuradaWebTestProject
 </div>
 
-# **Selenium ile Test Otomasyonu** //Intelij //MVN//JUNIT
+# **Selenium WEB** //Intelij //MVN//JUNIT//TESTNG
 # AllSteps Hepsiburada WithLogin Scenario 
 **Tags:chrome**
 1. [+] **Çerezler Kabul Edilir.**
